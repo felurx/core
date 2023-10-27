@@ -576,6 +576,8 @@ async def test_async_remove_with_platform_update_finishes(hass: HomeAssistant) -
         assert len(hass.states.async_entity_ids()) == 0
         await task
         assert len(hass.states.async_entity_ids()) == 0
+        # Clear the remove event so the entity can be removed again in next iteration
+        entity1._Entity__remove_event = None
 
 
 async def test_not_adding_duplicate_entities_with_unique_id(
