@@ -58,8 +58,6 @@ from .messages import construct_event_message, construct_result_message
 
 ALL_SERVICE_DESCRIPTIONS_JSON_CACHE = "websocket_api_all_service_descriptions_json"
 
-DATA_EXCEPTION_TRANSLATIONS = "websocket_api_exceptions_translations"
-
 
 @callback
 def async_register_commands(
